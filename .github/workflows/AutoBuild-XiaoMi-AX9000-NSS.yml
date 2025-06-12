@@ -4,7 +4,7 @@
 #   Author: Hyy2001X                                      #
 ###########################################################
 
-name: x86_64
+name: XiaoMi AX9000 NSS
 
 on:
   repository_dispatch:
@@ -26,19 +26,18 @@ on:
     inputs:
       Tempoary_CONFIG:
         description: '配置文件'
-        default: 'x86_64-Next'
+        default: 'AX9000'
         type: choice
         options:
-          - 'x86_64'
-          - 'x86_64-AP'
+          - 'AX9000'
+          # - 'AX9000_Full'
       Tempoary_FLAG:
         description: '固件标签'
-        default: 'AUTO'
+        default: 'NSS'
         type: choice
         options:
-          - 'AUTO'
+          - 'NSS'
           - 'Full'
-          - 'AP'
       Tempoary_IP:
         description: '固件 IP 地址 [可选]'
         default: ''
@@ -60,9 +59,9 @@ on:
 ### 环境变量设置
 env:
 # 编译时调用的 [.config] 文件名称
-  CONFIG_FILE: x86_64-Next
+  CONFIG_FILE: AX9000
 # 源码仓库:分支
-  DEFAULT_SOURCE: immortalwrt/immortalwrt:master
+  DEFAULT_SOURCE: qosmio/openwrt-ipq:main-nss
 # 删除无用文件以增加编译空间
   DELETE_USELESS_FILES: true
 # 删除早期的 workflow 任务
