@@ -61,7 +61,7 @@ env:
 # 编译时调用的 [.config] 文件名称
   CONFIG_FILE: AX9000
 # 源码仓库:分支
-  DEFAULT_SOURCE: qosmio/openwrt-ipq:main-nss
+  DEFAULT_SOURCE: qosmio/openwrt-ipq:24.10-nss
 # 删除无用文件以增加编译空间
   DELETE_USELESS_FILES: true
 # 删除早期的 workflow 任务
